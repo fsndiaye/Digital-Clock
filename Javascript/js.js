@@ -8,7 +8,9 @@ function updateclock(){
     let m = new Date().getMinutes();
     let s = new Date().getSeconds();
     let ampm = "AM";
+
     if(h>12){
+        console.log("Is Working");
         h = h-12;
         ampm ="PM";
     }
@@ -21,9 +23,9 @@ function updateclock(){
    hourEL.innerText = h;
    minutesEL.innerText = m;
    secondsEL.innerText = s;
-   ampmEL, (innerText =ampm);
+   ampmEL.innerText = ampm;
    setTimeout(()=>{
-    updateclock()
+    updateclock() 
 
    }, 1000)
     
